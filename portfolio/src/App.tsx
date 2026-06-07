@@ -1,13 +1,10 @@
 import { useState } from "react";
 
-import GM_BLACK from "./assets/icons/GM_BLACK.svg";
-import GM_WHITE from "./assets/icons/GM_WHITE.svg";
+import GM from "./assets/icons/GM.svg?react";
 
-import LINKEDIN_BLACK from "./assets/icons/LINKEDIN_BLACK.svg";
-import LINKEDIN_LIGHT from "./assets/icons/LINKEDIN_LIGHT.svg";
+import LINKEDIN from "./assets/icons/LINKEDIN.svg?react";
 
-import GITHUB_BLACK from "./assets/icons/GITHUB_BLACK.svg";
-import GITHUB_LIGHT from "./assets/icons/GITHUB_LIGHT.svg";
+import GITHUB from "./assets/icons/GITHUB.svg?react";
 
 import { dark } from "./page_styles/dark";
 import { light } from "./page_styles/light";
@@ -41,10 +38,8 @@ function App() {
               })
             }
           >
-            <img
-              src={theme.color === "dark" ? GM_WHITE : GM_BLACK}
-              className="cursor-pointer"
-              alt="home button"
+            <GM
+              className={`cursor-pointer ${theme.color === "dark" ? "text-white" : "text-black"}`}
             />
           </div>
 
@@ -65,15 +60,11 @@ function App() {
             >
               {language.header_contact}
             </h1>
-            <img
-              src={theme.color === "dark" ? GITHUB_BLACK : GITHUB_LIGHT}
-              alt="github github-icon"
-              className="w-[36px] h-[36px] cursor-pointer transition-colors duration-300"
+            <GITHUB
+              className={`w-[36px] h-[36px] cursor-pointer ${theme.color === "dark" ? "text-white" : "text-black"}`}
             />
-            <img
-              src={theme.color === "dark" ? LINKEDIN_BLACK : LINKEDIN_LIGHT}
-              alt="github github-icon"
-              className="w-[36px] h-[36px] cursor-pointer transition-colors duration-300"
+            <LINKEDIN
+              className={`w-[36px] h-[36px] cursor-pointer ${theme.color === "dark" ? "text-white" : "text-black"}`}
             />
           </div>
         </header>
