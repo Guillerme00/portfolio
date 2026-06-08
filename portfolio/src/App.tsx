@@ -12,7 +12,7 @@ import { portuguese } from "./page_language/portuguese";
 import { english } from "./page_language/english";
 
 function App() {
-  const [pageStyle, setPageStyle] = useState("light");
+  const [pageStyle, setPageStyle] = useState("dark");
   const [pageLanguage, setPageLanguage] = useState("portuguese");
 
   const theme = pageStyle === "dark" ? dark : light;
@@ -59,12 +59,24 @@ function App() {
             >
               {language.header_contact}
             </h1>
-            <GITHUB
-              className={`w-[36px] h-[36px] cursor-pointer ${theme.header_font_color} ${theme.header_font_color_hover} transition-colors duration-300`}
-            />
-            <LINKEDIN
-              className={`w-[36px] h-[36px] cursor-pointer ${theme.header_font_color} ${theme.header_font_color_hover} transition-colors duration-300`}
-            />
+            <a
+              href="https://github.com/Guillerme00"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GITHUB
+                className={`w-[36px] h-[36px] cursor-pointer ${theme.header_font_color} ${theme.header_font_color_hover} transition-colors duration-300`}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/guillerme-monteiro-toledo-499498242/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LINKEDIN
+                className={`w-[36px] h-[36px] cursor-pointer ${theme.header_font_color} ${theme.header_font_color_hover} transition-colors duration-300`}
+              />
+            </a>
             <LAMP
               className={`w-[36px] h-[36px] cursor-pointer ${theme.lamp_font_color} ${theme.lamp_font_color_hover} transition-colors duration-300`}
               onClick={() => {
