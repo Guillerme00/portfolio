@@ -1,9 +1,12 @@
 export const dark = {
   color: "dark",
-  bg: "bg-[#0B0B0B]",
-  header_border: "border-[#E3E3E3]",
-  header_font_color: "text-[#E7E9EA]",
-  header_font_color_hover: "hover:text-[#6D6C6C]",
-  lamp_font_color: undefined,
-  lamp_font_color_hover: "hover:text-[#d2d42b]",
+  primary_background: "bg-[#151515]",
+  secondary_background: "bg-[#000000]",
+  tag_background: "bg-[#2c2c2c]",
+  title_text_color: "text-[#ffffff]",
+  title_text_variant: "text-[#c4c4c4]",
+  title_base: "text-[#adadad]",
+  outline: "#adadad",
+  avaiable: "#77F26F",
+  in_work: "#FF3F3F",
 };
