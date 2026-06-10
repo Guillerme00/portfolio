@@ -17,7 +17,7 @@ function App() {
       <div
         className={`
           h-screen 
-          ${theme.bg}`}
+          ${theme.primary_background}`}
       ></div>
     </>
   );
