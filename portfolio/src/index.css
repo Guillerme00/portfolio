@@ -6,11 +6,17 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Geist";
+  font-family: "Geist_header_title";
   src: url("./assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
+  font-weight: 600;
 }
+
 
 .inter {
   font-family: "Inter", sans-serif;
+}
+
+.geist-header {
+  font-family: "Geist_header_title", sans-serif;
 }
