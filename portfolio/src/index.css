@@ -2,9 +2,18 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("./assets/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  src: url("./assets/fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
   font-style: normal;
+  font-weight: 600;
 }
+@font-face {
+  font-family: "Geist_mid_tag_text";
+  src: url("./assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+
 @font-face {
   font-family: "Geist_header_title";
   src: url("./assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
@@ -12,6 +21,19 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: "Geist_mid_tag";
+  src: url("./assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Geist_mid_text";
+  src: url("./assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
 
 .inter {
   font-family: "Inter", sans-serif;
@@ -19,4 +41,16 @@
 
 .geist-header {
   font-family: "Geist_header_title", sans-serif;
+}
+
+.geist-midtag {
+  font-family: "Geist_mid_tag", sans-serif;
+}
+
+.geist-midtag-text {
+  font-family: "Geist_mid_tag_text", sans-serif;
+}
+
+.geist-midtag-text_2 {
+  font-family: "Geist_mid_text", sans-serif;
 }
