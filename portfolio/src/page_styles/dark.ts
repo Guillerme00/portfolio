@@ -11,13 +11,15 @@ export const dark = {
 
   button_background: "bg-[#ffffff]",
   button_hover: "hover:bg-[#adadad]",
+  button_tag_hover: "hover:bg-[#525252]",
+
   button_empty_border_hover: "hover:border-[#adadad]",
   button_empty_text_hover: "hover:text-[#adadad]",
   button_full_text: "text-[#000000]",
   button_empty_text: "text-[#ffffff]",
   button_border_color: "border-[#ffffff]",
 
-  outline: "#adadad",
+  outline: "border-[#ffffff1a]",
   avaliable: "bg-[#77F26F]",
   in_work: "#FF3F3F",
 };

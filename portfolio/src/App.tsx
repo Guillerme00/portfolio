@@ -13,6 +13,7 @@ import { light } from "./page_styles/light";
 
 import { portuguese } from "./page_language/portuguese";
 import { english } from "./page_language/english";
+import { SkillTag } from "./components/skill_tag";
 
 function App() {
   const [pageStyle, setPageStyle] = useState("dark");
@@ -28,7 +29,7 @@ function App() {
           ${theme.primary_background}`}
       >
         <header
-          className={`sticky top-0 z-100 h-[81px] flex items-center justify-between ml-[40px] mr-[40px] `}
+          className={`sticky top-0 z-100 h-[81px] flex items-center justify-between ml-[40px] mr-[40px] py-[24px] ${theme.primary_background}`}
         >
           {/* left */}
           <div
@@ -104,6 +105,7 @@ function App() {
             )}
           </div>
         </header>
+        {/* Body 1 */}
         <div className="py-[128px] flex flex-col items-center">
           <div className="flex flex-col items-center">
             {/* Availability */}
@@ -157,6 +159,68 @@ function App() {
               </button>
             </div>
           </div>
+        </div>
+        {/* Body 2 */}
+        <div className={`py-[128px] flex flex-col items-center h-screen ${theme.secondary_background}`}>
+            {/* Skills */}
+            <div className="flex flex-col items-center">
+              <h1
+                className={`geist-midtag-text text-[32px] leading-none m-0 ${theme.title_text_color} mb-[4px]`}
+              >
+                {language.header_skills}
+              </h1>
+              <h1
+                className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
+              >
+                {language.skills_text}
+              </h1>
+            </div>
+            {/* Show skills */}
+            <div className="flex gap-[32px] mt-[64px] max-w-[1360px] w-full">
+              <div className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}>
+                <h1 className={`geist-midtag text-[14px] ${theme.title_text_variant}`}>
+                  {language.tech.frontend.name}
+                </h1>
+                <div className="mt-[16px]">
+                  {language.tech.frontend.skills.map((item:string) => (
+                    <SkillTag hover={theme.button_tag_hover} text={item} bg_tag={theme.tag_background} text_color={theme.title_text_color}/>
+                  ))}
+                </div>
+              </div>
+
+              <div className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}>
+                <h1 className={`geist-midtag text-[14px] ${theme.title_text_variant}`}>
+                  {language.tech.backend.name}
+                </h1>
+                <div className="mt-[16px]">
+                  {language.tech.backend.skills.map((item:string) => (
+                    <SkillTag hover={theme.button_tag_hover} text={item} bg_tag={theme.tag_background} text_color={theme.title_text_color}/>
+                  ))}
+                </div>
+              </div>
+
+              <div className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}>
+                <h1 className={`geist-midtag text-[14px] ${theme.title_text_variant}`}>
+                  {language.tech.database.name}
+                </h1>
+                <div className="mt-[16px]">
+                  {language.tech.database.skills.map((item:string) => (
+                    <SkillTag hover={theme.button_tag_hover} text={item} bg_tag={theme.tag_background} text_color={theme.title_text_color}/>
+                  ))}
+                </div>
+              </div>
+
+              <div className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}>
+                <h1 className={`geist-midtag text-[14px] ${theme.title_text_variant}`}>
+                  {language.tech.tools.name}
+                </h1>
+                <div className="mt-[16px]">
+                  {language.tech.tools.skills.map((item:string) => (
+                    <SkillTag hover={theme.button_tag_hover} text={item} bg_tag={theme.tag_background} text_color={theme.title_text_color}/>
+                  ))}
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </>
