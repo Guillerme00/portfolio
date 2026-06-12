@@ -13,7 +13,9 @@ import { light } from "./page_styles/light";
 
 import { portuguese } from "./page_language/portuguese";
 import { english } from "./page_language/english";
+
 import { SkillTag } from "./components/skill_tag";
+import ProjectCard from "./components/project_card";
 
 function App() {
   const [pageStyle, setPageStyle] = useState("dark");
@@ -25,9 +27,10 @@ function App() {
     <>
       <div
         className={`
-          h-screen flex flex-col
+          min-h-screen flex flex-col
           ${theme.primary_background}`}
       >
+        {/* Header */}
         <header
           className={`sticky top-0 z-100 h-[81px] flex items-center justify-between ml-[40px] mr-[40px] py-[24px] ${theme.primary_background}`}
         >
@@ -220,6 +223,27 @@ function App() {
                   ))}
                 </div>
               </div>
+            </div>
+        </div>
+        {/* Body 3 */}
+        <div className={`py-[128px] flex flex-col items-center min-h-screen ${theme.primary_background}`}>
+            {/* Projects */}
+            <div className="flex flex-col items-center">
+              <h1
+                className={`geist-midtag-text text-[32px] leading-none m-0 ${theme.title_text_color} mb-[4px]`}
+              >
+                {language.header_projects}
+              </h1>
+              <h1
+                className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
+              >
+                {language.projects_text}
+              </h1>
+            </div>
+            <div className="pt-[64px] flex gap-[32px]">
+              <ProjectCard title_text_variant={theme.title_text_variant} title_text_color={theme.title_text_color} text={"LIVEDEMO"} bg_tag={theme.tag_background} text_color={theme.title_text_color} button_background={theme.button_background} button_border_color={theme.button_border_color} button_empty_border_hover={theme.button_empty_border_hover} button_empty_text={theme.button_empty_text} button_empty_text_hover={theme.button_empty_text_hover} button_full_text={theme.button_full_text} button_hover={theme.button_hover} tag_hover={theme.button_tag_hover}/>
+              <ProjectCard title_text_variant={theme.title_text_variant} title_text_color={theme.title_text_color} text={"LIVEDEMO"} bg_tag={theme.tag_background} text_color={theme.title_text_color} button_background={theme.button_background} button_border_color={theme.button_border_color} button_empty_border_hover={theme.button_empty_border_hover} button_empty_text={theme.button_empty_text} button_empty_text_hover={theme.button_empty_text_hover} button_full_text={theme.button_full_text} button_hover={theme.button_hover} tag_hover={theme.button_tag_hover}/>
+              <ProjectCard title_text_variant={theme.title_text_variant} title_text_color={theme.title_text_color} text={"LIVEDEMO"} bg_tag={theme.tag_background} text_color={theme.title_text_color} button_background={theme.button_background} button_border_color={theme.button_border_color} button_empty_border_hover={theme.button_empty_border_hover} button_empty_text={theme.button_empty_text} button_empty_text_hover={theme.button_empty_text_hover} button_full_text={theme.button_full_text} button_hover={theme.button_hover} tag_hover={theme.button_tag_hover}/>
             </div>
         </div>
       </div>

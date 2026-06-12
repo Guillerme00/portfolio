@@ -11,6 +11,7 @@ export const english = {
   my_projects: "My projects",
   my_contacts: "Contact Me",
   skills_text: "Tools and technologies that I use to build modern solutions.",
+  projects_text: "Here are some projects that demonstrate my experience.",
   tech: {
     frontend: {
     name: "FRONTEND",

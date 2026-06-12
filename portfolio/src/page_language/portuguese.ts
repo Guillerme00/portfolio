@@ -11,6 +11,7 @@ export const portuguese = {
   my_projects: "Veja meus projetos",
   my_contacts: "Entre em contato",
   skills_text: "Ferramentas e tecnologias que utilizo para construir soluções modernas.",
+  projects_text: "Alguns projetos que demonstram minha experiência.",
   tech: {
     frontend: {
       name: "FRONTEND",
