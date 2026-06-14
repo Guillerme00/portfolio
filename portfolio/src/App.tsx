@@ -32,7 +32,7 @@ function App() {
       >
         {/* Header */}
         <header
-          className={`sticky top-0 z-100 h-[81px] flex items-center justify-between ml-[40px] mr-[40px] py-[24px] ${theme.primary_background}`}
+          className={`sticky top-0 z-100 h-[81px] flex items-center justify-between pl-[40px] pr-[40px] py-[24px] ${theme.primary_background}`}
         >
           {/* left */}
           <div
@@ -164,87 +164,147 @@ function App() {
           </div>
         </div>
         {/* Body 2 */}
-        <div className={`py-[128px] flex flex-col items-center h-screen ${theme.secondary_background}`}>
-            {/* Skills */}
-            <div className="flex flex-col items-center">
+        <div
+          className={`py-[128px] flex flex-col items-center ${theme.secondary_background}`}
+        >
+          {/* Skills */}
+          <div className="flex flex-col items-center">
+            <h1
+              className={`geist-midtag-text text-[32px] leading-none m-0 ${theme.title_text_color} mb-[4px]`}
+            >
+              {language.header_skills}
+            </h1>
+            <h1
+              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
+            >
+              {language.skills_text}
+            </h1>
+          </div>
+          {/* Show skills */}
+          <div className="flex gap-[32px] mt-[64px] max-w-[1360px] w-full">
+            <div
+              className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}
+            >
               <h1
-                className={`geist-midtag-text text-[32px] leading-none m-0 ${theme.title_text_color} mb-[4px]`}
+                className={`geist-midtag text-[14px] ${theme.title_text_variant}`}
               >
-                {language.header_skills}
+                {language.tech.frontend.name}
               </h1>
-              <h1
-                className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
-              >
-                {language.skills_text}
-              </h1>
-            </div>
-            {/* Show skills */}
-            <div className="flex gap-[32px] mt-[64px] max-w-[1360px] w-full">
-              <div className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}>
-                <h1 className={`geist-midtag text-[14px] ${theme.title_text_variant}`}>
-                  {language.tech.frontend.name}
-                </h1>
-                <div className="mt-[16px]">
-                  {language.tech.frontend.skills.map((item:string) => (
-                    <SkillTag hover={theme.button_tag_hover} text={item} bg_tag={theme.tag_background} text_color={theme.title_text_color}/>
-                  ))}
-                </div>
-              </div>
-
-              <div className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}>
-                <h1 className={`geist-midtag text-[14px] ${theme.title_text_variant}`}>
-                  {language.tech.backend.name}
-                </h1>
-                <div className="mt-[16px]">
-                  {language.tech.backend.skills.map((item:string) => (
-                    <SkillTag hover={theme.button_tag_hover} text={item} bg_tag={theme.tag_background} text_color={theme.title_text_color}/>
-                  ))}
-                </div>
-              </div>
-
-              <div className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}>
-                <h1 className={`geist-midtag text-[14px] ${theme.title_text_variant}`}>
-                  {language.tech.database.name}
-                </h1>
-                <div className="mt-[16px]">
-                  {language.tech.database.skills.map((item:string) => (
-                    <SkillTag hover={theme.button_tag_hover} text={item} bg_tag={theme.tag_background} text_color={theme.title_text_color}/>
-                  ))}
-                </div>
-              </div>
-
-              <div className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}>
-                <h1 className={`geist-midtag text-[14px] ${theme.title_text_variant}`}>
-                  {language.tech.tools.name}
-                </h1>
-                <div className="mt-[16px]">
-                  {language.tech.tools.skills.map((item:string) => (
-                    <SkillTag hover={theme.button_tag_hover} text={item} bg_tag={theme.tag_background} text_color={theme.title_text_color}/>
-                  ))}
-                </div>
+              <div className="mt-[16px]">
+                {language.tech.frontend.skills.map((item: string) => (
+                  <SkillTag
+                    hover={theme.button_tag_hover}
+                    text={item}
+                    bg_tag={theme.tag_background}
+                    text_color={theme.title_text_color}
+                  />
+                ))}
               </div>
             </div>
+
+            <div
+              className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}
+            >
+              <h1
+                className={`geist-midtag text-[14px] ${theme.title_text_variant}`}
+              >
+                {language.tech.backend.name}
+              </h1>
+              <div className="mt-[16px]">
+                {language.tech.backend.skills.map((item: string) => (
+                  <SkillTag
+                    hover={theme.button_tag_hover}
+                    text={item}
+                    bg_tag={theme.tag_background}
+                    text_color={theme.title_text_color}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div
+              className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}
+            >
+              <h1
+                className={`geist-midtag text-[14px] ${theme.title_text_variant}`}
+              >
+                {language.tech.database.name}
+              </h1>
+              <div className="mt-[16px]">
+                {language.tech.database.skills.map((item: string) => (
+                  <SkillTag
+                    hover={theme.button_tag_hover}
+                    text={item}
+                    bg_tag={theme.tag_background}
+                    text_color={theme.title_text_color}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div
+              className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}
+            >
+              <h1
+                className={`geist-midtag text-[14px] ${theme.title_text_variant}`}
+              >
+                {language.tech.tools.name}
+              </h1>
+              <div className="mt-[16px]">
+                {language.tech.tools.skills.map((item: string) => (
+                  <SkillTag
+                    hover={theme.button_tag_hover}
+                    text={item}
+                    bg_tag={theme.tag_background}
+                    text_color={theme.title_text_color}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
         {/* Body 3 */}
-        <div className={`py-[128px] flex flex-col items-center min-h-screen ${theme.primary_background}`}>
-            {/* Projects */}
-            <div className="flex flex-col items-center">
-              <h1
-                className={`geist-midtag-text text-[32px] leading-none m-0 ${theme.title_text_color} mb-[4px]`}
-              >
-                {language.header_projects}
-              </h1>
-              <h1
-                className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
-              >
-                {language.projects_text}
-              </h1>
-            </div>
-            <div className="pt-[64px] flex gap-[32px]">
-              <ProjectCard title_text_variant={theme.title_text_variant} title_text_color={theme.title_text_color} text={"LIVEDEMO"} bg_tag={theme.tag_background} text_color={theme.title_text_color} button_background={theme.button_background} button_border_color={theme.button_border_color} button_empty_border_hover={theme.button_empty_border_hover} button_empty_text={theme.button_empty_text} button_empty_text_hover={theme.button_empty_text_hover} button_full_text={theme.button_full_text} button_hover={theme.button_hover} tag_hover={theme.button_tag_hover}/>
-              <ProjectCard title_text_variant={theme.title_text_variant} title_text_color={theme.title_text_color} text={"LIVEDEMO"} bg_tag={theme.tag_background} text_color={theme.title_text_color} button_background={theme.button_background} button_border_color={theme.button_border_color} button_empty_border_hover={theme.button_empty_border_hover} button_empty_text={theme.button_empty_text} button_empty_text_hover={theme.button_empty_text_hover} button_full_text={theme.button_full_text} button_hover={theme.button_hover} tag_hover={theme.button_tag_hover}/>
-              <ProjectCard title_text_variant={theme.title_text_variant} title_text_color={theme.title_text_color} text={"LIVEDEMO"} bg_tag={theme.tag_background} text_color={theme.title_text_color} button_background={theme.button_background} button_border_color={theme.button_border_color} button_empty_border_hover={theme.button_empty_border_hover} button_empty_text={theme.button_empty_text} button_empty_text_hover={theme.button_empty_text_hover} button_full_text={theme.button_full_text} button_hover={theme.button_hover} tag_hover={theme.button_tag_hover}/>
-            </div>
+        <div
+          className={`py-[128px] flex flex-col items-center min-h-screen ${theme.primary_background}`}
+        >
+          {/* Projects */}
+          <div className="flex flex-col items-center">
+            <h1
+              className={`geist-midtag-text text-[32px] leading-none m-0 ${theme.title_text_color} mb-[4px]`}
+            >
+              {language.header_projects}
+            </h1>
+            <h1
+              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
+            >
+              {language.projects_text}
+            </h1>
+          </div>
+          <div className="pt-[64px] flex gap-[32px]">
+            {language.projects.map((item) => (
+              <ProjectCard
+                title_text_variant={theme.title_text_variant}
+                title_text_color={theme.title_text_color}
+                background={theme.secondary_background}
+                bg_tag={theme.tag_background}
+                text_color={theme.title_text_color}
+                button_background={theme.button_background}
+                button_border_color={theme.button_border_color}
+                button_empty_border_hover={theme.button_empty_border_hover}
+                button_empty_text={theme.button_empty_text}
+                button_empty_text_hover={theme.button_empty_text_hover}
+                button_full_text={theme.button_full_text}
+                button_hover={theme.button_hover}
+                tag_hover={theme.button_tag_hover}
+                github_link={item.github_link}
+                live_link={item.live_link}
+                project_name={item.name}
+                project_text={item.text}
+                techs={item.tags}
+                project_photo={item.image}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>
