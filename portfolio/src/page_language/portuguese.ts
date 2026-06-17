@@ -76,4 +76,7 @@ export const portuguese = {
       github_link: "https://github.com/Guillerme00/EFOOD-PROJECT-FRONTEND",
     },
   ],
+  final_contact_me: "Entre em contato comigo",
+  final_contact_text_1: "Estou sempre aberto a novos projetos e colaborações interessantes.",
+  final_contact_text_2: "Sinta-se à vontade para entrar em contato.",
 };

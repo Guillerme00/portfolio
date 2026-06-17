@@ -20,6 +20,12 @@
   font-style: normal;
   font-weight: 800;
 }
+@font-face {
+  font-family: "Geist_800";
+  src: url("./assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
 
 @font-face {
   font-family: "Geist_700";
@@ -58,6 +64,9 @@
 
 .geist-header {
   font-family: "Geist_header_title", sans-serif;
+}
+.geist-800 {
+  font-family: "Geist_800", sans-serif;
 }
 .geist-700 {
   font-family: "Geist_700", sans-serif;

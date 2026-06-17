@@ -306,6 +306,12 @@ function App() {
             ))}
           </div>
         </div>
+          {/* Body 4 */}
+        <div className={`py-[128px] flex flex-col items-center ${theme.secondary_background} mb-[64px]`}>
+            <h1 className={`${theme.title_text_color} text-[32px] geist-800`}>{language.final_contact_me}</h1>
+            <h2 className={`${theme.title_text_variant} text-[16px] inter_400`}>{language.final_contact_text_1}</h2>
+            <h2 className={`${theme.title_text_variant} text-[16px] inter_400`}>{language.final_contact_text_2}</h2>
+        </div>
       </div>
     </>
   );
