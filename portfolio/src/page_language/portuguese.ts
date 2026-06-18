@@ -79,4 +79,5 @@ export const portuguese = {
   final_contact_me: "Entre em contato comigo",
   final_contact_text_1: "Estou sempre aberto a novos projetos e colaborações interessantes.",
   final_contact_text_2: "Sinta-se à vontade para entrar em contato.",
+  email_message: "E-mail copiado para a área de transferência",
 };

@@ -18,6 +18,7 @@ export const dark = {
   button_full_text: "text-[#000000]",
   button_empty_text: "text-[#ffffff]",
   button_border_color: "border-[#ffffff]",
+  button_contacts_hover: "hover:bg-[#1A1A1A]",
 
   outline: "border-[#ffffff1a]",
   avaliable: "bg-[#77F26F]",

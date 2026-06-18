@@ -54,21 +54,45 @@ function App() {
           >
             <button
               className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
+              onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
             >
               {language.header_about_me}
             </button>
             <button
               className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
+              onClick={() => {
+                document.getElementById("skills")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
             >
               {language.header_skills}
             </button>
             <button
               className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
+              onClick={() => {
+                document.getElementById("projects")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
             >
               {language.header_projects}
             </button>
             <button
               className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
+              onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
             >
               {language.header_contact}
             </button>
@@ -165,6 +189,7 @@ function App() {
         </div>
         {/* Body 2 */}
         <div
+          id="skills"
           className={`py-[128px] flex flex-col items-center ${theme.secondary_background}`}
         >
           {/* Skills */}
@@ -265,6 +290,7 @@ function App() {
         </div>
         {/* Body 3 */}
         <div
+          id="projects"
           className={`py-[128px] flex flex-col items-center min-h-screen ${theme.primary_background}`}
         >
           {/* Projects */}
@@ -306,11 +332,35 @@ function App() {
             ))}
           </div>
         </div>
-          {/* Body 4 */}
-        <div className={`py-[128px] flex flex-col items-center ${theme.secondary_background} mb-[64px]`}>
+        {/* Body 4 */}
+        <div
+        id="contact"
+        className={`py-[128px] flex flex-col items-center ${theme.secondary_background}`}>
+          <div className="flex flex-col items-center mb-[64px]">
             <h1 className={`${theme.title_text_color} text-[32px] geist-800`}>{language.final_contact_me}</h1>
             <h2 className={`${theme.title_text_variant} text-[16px] inter_400`}>{language.final_contact_text_1}</h2>
             <h2 className={`${theme.title_text_variant} text-[16px] inter_400`}>{language.final_contact_text_2}</h2>
+          </div>
+        <div>
+          <button className={`mb-[8px] w-[432px] cursor-pointer py-[16px] px-[24px] rounded-full flex gap-[10px] transition-colors duration-300 ${theme.button_contacts_hover} ${theme.button_border_color} border-1`}
+          onClick={async () => {
+            await navigator.clipboard.writeText("guilhermemonteirotoledo@gmail.com")
+            alert(language.email_message);
+          }}><MAIL className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600`}>guilhermemonteirotoledo@gmail.com</span></button>
+          <button className={`mb-[8px] w-[432px] cursor-pointer py-[16px] px-[24px] rounded-full flex gap-[10px] transition-colors duration-300 ${theme.button_contacts_hover} ${theme.button_border_color} border-1`}
+          onClick={() => {
+            window.open("https://www.linkedin.com/in/guilhermemonteirotoledo/", "_blank");
+          }}><LINKEDIN className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600`}>linkedin.com/in/guilhermemonteirotoledo</span></button>
+          <button className={`w-[432px] cursor-pointer py-[16px] px-[24px] rounded-full flex gap-[10px] transition-colors duration-300 ${theme.button_contacts_hover} ${theme.button_border_color} border-1`}
+          onClick={() => {
+            window.open("https://github.com/Guillerme00", "_blank");
+          }}><GITHUB className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600`}>https://github.com/Guillerme00</span></button>
+        </div>
+        </div>
+        {/* Body 5 */}
+        <div className="py-[24px] flex flex-col items-center">
+          <h1 className={`inter_600 ${theme.title_text_variant} text-[14px]`}>© 2026 Guilherme Monteiro</h1>
+          <h1 className={`${theme.title_text_variant} text-[14px]`}>Website Design by Ana Julia Teles</h1>
         </div>
       </div>
     </>

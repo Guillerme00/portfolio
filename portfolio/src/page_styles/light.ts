@@ -17,6 +17,7 @@ export const light = {
   button_full_text: "text-[#FFFFFF]",
   button_empty_text: "text-[#000000]",
   button_border_color: "border-[#000000]",
+  button_contacts_hover: "hover:bg-[#CCCCCC]",
 
   outline: "border-[#00000035]",
   avaliable: "bg-[#77F26F]",

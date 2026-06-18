@@ -78,4 +78,5 @@ export const english = {
   final_contact_me: "Contact me",
   final_contact_text_1: "I am always open to new projects and interesting collaborations.",
   final_contact_text_2: "Feel free to get in touch.",
+  email_message: "Email copied to clipboard",
 };

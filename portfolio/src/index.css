@@ -15,6 +15,13 @@
   font-weight: 400;
 }
 @font-face {
+  font-family: "Inter_600";
+  src: url("./assets/fonts/Inter-VariableFont.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
   font-family: "Geist_mid_tag_text";
   src: url("./assets/fonts/Geist-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
@@ -60,6 +67,9 @@
 }
 .inter_400 {
   font-family: "Inter_400", sans-serif;
+}
+.inter_600 {
+  font-family: "Inter_600", sans-serif;
 }
 
 .geist-header {
