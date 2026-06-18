@@ -4,7 +4,7 @@ import GM from "./assets/icons/GM.svg?react";
 import GITHUB from "./assets/icons/GITHUB.svg?react";
 import LINKEDIN from "./assets/icons/LINKEDIN.svg?react";
 import MAIL from "./assets/icons/MAIL.svg?react";
-import MENU from "./assets/icons/MENU.svg?react";
+// import MENU from "./assets/icons/MENU.svg?react";
 import LIGHT_MODE from "./assets/icons/DARK_MODE.svg?react";
 import DARK_MODE from "./assets/icons/LIGHT_MODE.svg?react";
 
