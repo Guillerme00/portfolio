@@ -257,7 +257,7 @@ function App() {
               {language.header_skills}
             </h1>
             <h1
-              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
+              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant} flex text-center p-[4px]`}
             >
               {language.skills_text}
             </h1>
@@ -398,7 +398,7 @@ function App() {
             <h2 className={`${theme.title_text_variant} text-[16px] inter_400 flex text-center`}>{language.final_contact_text_1}</h2>
             <h2 className={`${theme.title_text_variant} text-[16px] inter_400 flex text-center`}>{language.final_contact_text_2}</h2>
           </div>
-        <div>
+        <div className="p-[4px]">
           <button className={`mb-[8px] w-full cursor-pointer py-[16px] px-[24px] rounded-full flex gap-[10px] transition-colors duration-300 ${theme.button_contacts_hover} ${theme.button_border_color} border-1`}
           onClick={async () => {
             await navigator.clipboard.writeText("guilhermemonteirotoledo@gmail.com")
