@@ -46,7 +46,7 @@ const ProjectCard = ({
 }: ProjectCard) => {
   return (
     <div
-      className={`max-w-[430px] overflow-hidden rounded-xl border border-zinc-700 ${background} hover:-translate-y-[8px] transition-transform duration-300`}
+      className={`max-w-[360px] md:max-w-[430px] overflow-hidden rounded-xl border border-zinc-700 ${background} hover:-translate-y-[8px] transition-transform duration-300`}
     >
       {/* Image */}
       <div className="w-full">

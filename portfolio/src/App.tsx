@@ -28,7 +28,7 @@ function App() {
     <>
       <div
         className={`
-          min-h-screen flex flex-col
+          min-h-screen flex flex-col overflow-x-hidden
           ${theme.primary_background}`}
       >
         {/* Header */}
@@ -257,7 +257,7 @@ function App() {
               {language.header_skills}
             </h1>
             <h1
-              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
+              className={`geist-midtag-text_2 text-[16px] px-[8px] md:px-[0px] leading-none m-0 ${theme.title_text_variant}`}
             >
               {language.skills_text}
             </h1>
