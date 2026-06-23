@@ -190,7 +190,7 @@ function App() {
           </div>
         </header>
         {/* Body 1 */}
-        <div className="py-[128px] flex flex-col items-center">
+        <div className="pb-[128px] pt-[64px] md:py-[128px] flex flex-col items-center">
           <div className="flex flex-col items-center">
             {/* Availability */}
             <div className="flex items-center gap-[12px] geist-midtag mb-[16px]">
@@ -207,7 +207,7 @@ function App() {
               </h1>
             </div>
             {/* Name */}
-            <div className="flex flex-col items-center text-center max-w-[925px]">
+            <div className="flex flex-col items-center text-center max-w-[925px] md:px-[0px]">
               <h1
                 className={`geist-midtag-text text-[50px] md:text-[72px] leading-none m-0 ${theme.title_text_color}`}
               >
@@ -215,7 +215,7 @@ function App() {
               </h1>
 
               <h1
-                className={`geist-midtag-text text-[50px] md:text-[72px] leading-none m-0 ${theme.title_text_variant}`}
+                className={`geist-midtag-text text-[46px] md:text-[72px] leading-none m-0 ${theme.title_text_variant}`}
               >
                 {language.secondary_mid}
               </h1>
@@ -230,14 +230,26 @@ function App() {
               </h3>
             </div>
             {/* Buttons */}
-            <div className="mt-[64px] flex gap-[16px]">
+            <div className="mt-[64px] w-full px-[12px] flex flex-col md:flex-row gap-[16px] justify-center">
               <button
                 className={`py-[16px] px-[26px] rounded-full ${theme.button_hover} ${theme.button_background} ${theme.button_full_text} inter cursor-pointer transition-colors duration-300`}
+                onClick={() => {
+                document.getElementById("projects")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
               >
                 {language.my_projects}
               </button>
               <button
                 className={`py-[16px] px-[26px] rounded-full bg-transparent border-[1px] ${theme.button_empty_border_hover} ${theme.button_empty_text_hover} ${theme.button_border_color} ${theme.button_empty_text} inter cursor-pointer transition-colors duration-300`}
+                onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
               >
                 {language.my_contacts}
               </button>
@@ -358,7 +370,7 @@ function App() {
               {language.header_projects}
             </h1>
             <h1
-              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant}`}
+              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant} flex text-center`}
             >
               {language.projects_text}
             </h1>
@@ -403,15 +415,15 @@ function App() {
           onClick={async () => {
             await navigator.clipboard.writeText("guilhermemonteirotoledo@gmail.com")
             alert(language.email_message);
-          }}><MAIL className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600`}>guilhermemonteirotoledo@gmail.com</span></button>
+          }}><MAIL className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600 break-all`}>guilhermemonteirotoledo@gmail.com</span></button>
           <button className={`mb-[8px] w-full cursor-pointer py-[16px] px-[24px] rounded-full flex gap-[10px] transition-colors duration-300 ${theme.button_contacts_hover} ${theme.button_border_color} border-1`}
           onClick={() => {
             window.open("https://www.linkedin.com/in/guilhermemonteirotoledo/", "_blank");
-          }}><LINKEDIN className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600`}>linkedin.com/in/guilhermemonteirotoledo</span></button>
+          }}><LINKEDIN className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600 break-all`}>linkedin.com/in/guilhermemonteirotoledo</span></button>
           <button className={`w-full cursor-pointer py-[16px] px-[24px] rounded-full flex gap-[10px] transition-colors duration-300 ${theme.button_contacts_hover} ${theme.button_border_color} border-1`}
           onClick={() => {
             window.open("https://github.com/Guillerme00", "_blank");
-          }}><GITHUB className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600`}>https://github.com/Guillerme00</span></button>
+          }}><GITHUB className={`${theme.title_text_color}`}/><span className={`${theme.title_text_color} text-[16px] inter_600 break-all`}>https://github.com/Guillerme00</span></button>
         </div>
         </div>
         {/* Body 5 */}

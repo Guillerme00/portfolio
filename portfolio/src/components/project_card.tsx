@@ -86,7 +86,7 @@ const ProjectCard = ({
           {/* Buttons */}
           <div className="flex w-full gap-[16px] pt-[16px]">
             <button
-              className={`flex-1 py-[16px] px-[26px] rounded-full ${button_hover} ${button_background} ${button_full_text} inter cursor-pointer transition-colors duration-300`}
+              className={`flex-1 text-[12px] md:text-[16px] py-[16px] px-[26px] rounded-full ${button_hover} ${button_background} ${button_full_text} inter cursor-pointer transition-colors duration-300`}
               onClick={() => {
                 window.open(live_link, "_blank");
               }}
@@ -94,7 +94,7 @@ const ProjectCard = ({
               LIVE DEMO
             </button>
             <button
-              className={`flex-1 py-[16px] px-[26px] rounded-full bg-transparent border-[1px] ${button_empty_border_hover} ${button_empty_text_hover} ${button_border_color} ${button_empty_text} inter cursor-pointer transition-colors duration-300`}
+              className={`flex-1 text-[12px] md:text-[16px] py-[16px] px-[26px] rounded-full bg-transparent border-[1px] ${button_empty_border_hover} ${button_empty_text_hover} ${button_border_color} ${button_empty_text} inter cursor-pointer transition-colors duration-300`}
               onClick={() => {
                 window.open(github_link, "_blank");
               }}
