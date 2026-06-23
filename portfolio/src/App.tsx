@@ -50,6 +50,34 @@ function App() {
           </div>
 
           {/* mid */}
+          <button
+              className={`cursor-pointer geist-header ${theme.title_text_color} ${theme.title_hover} transition-colors duration-300 md:hidden`}
+              onClick={() => {
+                if (language.header_language === "PT-BR") {
+                  setPageLanguage("US-EN");
+                } else if (language.header_language === "US-EN") {
+                  setPageLanguage("PT-BR");
+                }
+              }}
+            >
+              {language.header_language}
+            </button>
+
+            {theme.color === "dark" ? (
+              <DARK_MODE
+                className={`cursor-pointer ${theme.title_text_color} ${theme.title_hover} transition-colors duration-300 md:hidden`}
+                onClick={() => {
+                  setPageStyle("light");
+                }}
+              />
+            ) : (
+              <LIGHT_MODE
+                className={`cursor-pointer ${theme.title_text_color} ${theme.title_hover} transition-colors duration-300 md:hidden`}
+                onClick={() => {
+                  setPageStyle("dark");
+                }}
+              />
+            )}
           <div
             className={`hidden md:flex ${theme.title_text_variant} gap-[24px] geist-header`}
           >
@@ -209,13 +237,13 @@ function App() {
             {/* Name */}
             <div className="flex flex-col items-center text-center max-w-[925px] md:px-[0px]">
               <h1
-                className={`geist-midtag-text text-[50px] md:text-[72px] leading-none m-0 ${theme.title_text_color}`}
+                className={`geist-midtag-text max-[330px]:text-[45px] text-[50px] md:text-[72px] leading-none m-0 ${theme.title_text_color}`}
               >
                 Guilherme Monteiro,
               </h1>
 
               <h1
-                className={`geist-midtag-text text-[46px] md:text-[72px] leading-none m-0 ${theme.title_text_variant}`}
+                className={`max-[330px]:text-[36px] geist-midtag-text text-[46px] md:text-[72px] leading-none m-0 ${theme.title_text_variant}`}
               >
                 {language.secondary_mid}
               </h1>
@@ -230,7 +258,7 @@ function App() {
               </h3>
             </div>
             {/* Buttons */}
-            <div className="mt-[64px] w-full px-[12px] flex flex-col md:flex-row gap-[16px] justify-center">
+            <div className="mt-[64px] w-full px-[16px] flex flex-col md:flex-row gap-[16px] justify-center">
               <button
                 className={`py-[16px] px-[26px] rounded-full ${theme.button_hover} ${theme.button_background} ${theme.button_full_text} inter cursor-pointer transition-colors duration-300`}
                 onClick={() => {
@@ -269,13 +297,13 @@ function App() {
               {language.header_skills}
             </h1>
             <h1
-              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant} flex text-center p-[4px]`}
+              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant} flex text-center px-[12px]`}
             >
               {language.skills_text}
             </h1>
           </div>
           {/* Show skills */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[32px] mt-[64px] max-w-[1360px]">
+          <div className="px-[12px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[32px] mt-[64px] max-w-[1360px]">
             <div
               className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}
             >
@@ -370,12 +398,12 @@ function App() {
               {language.header_projects}
             </h1>
             <h1
-              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant} flex text-center`}
+              className={`geist-midtag-text_2 text-[16px] leading-none m-0 ${theme.title_text_variant} flex text-center px-[16px]`}
             >
               {language.projects_text}
             </h1>
           </div>
-          <div className="pt-[64px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-[32px]">
+          <div className="pt-[64px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-[32px] px-[12px]">
             {language.projects.map((item) => (
               <ProjectCard
                 title_text_variant={theme.title_text_variant}
