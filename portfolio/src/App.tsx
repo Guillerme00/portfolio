@@ -209,13 +209,13 @@ function App() {
             {/* Name */}
             <div className="flex flex-col items-center text-center max-w-[925px]">
               <h1
-                className={`geist-midtag-text text-[72px] leading-none m-0 ${theme.title_text_color}`}
+                className={`geist-midtag-text text-[50px] md:text-[72px] leading-none m-0 ${theme.title_text_color}`}
               >
                 Guilherme Monteiro,
               </h1>
 
               <h1
-                className={`geist-midtag-text text-[72px] leading-none m-0 ${theme.title_text_variant}`}
+                className={`geist-midtag-text text-[50px] md:text-[72px] leading-none m-0 ${theme.title_text_variant}`}
               >
                 {language.secondary_mid}
               </h1>
@@ -224,7 +224,7 @@ function App() {
             {/* Text */}
             <div className="max-w-[892px]">
               <h3
-                className={`geist-midtag-text_2 text-[20px] mt-[16px] text-center ${theme.title_text_variant}`}
+                className={`geist-midtag-text_2 text-[16px] px-[16px] md:px-[0px] md:text-[20px] mt-[16px] text-center ${theme.title_text_variant}`}
               >
                 {language.text_mid}
               </h3>
@@ -263,7 +263,7 @@ function App() {
             </h1>
           </div>
           {/* Show skills */}
-          <div className="flex gap-[32px] mt-[64px] max-w-[1360px] w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[32px] mt-[64px] max-w-[1360px]">
             <div
               className={`max-w-[316px] w-full p-[32px] ${theme.primary_background} rounded-lg flex flex-col ${theme.outline} border-[1px] hover:-translate-y-[8px] transition-transform duration-300`}
             >
@@ -363,7 +363,7 @@ function App() {
               {language.projects_text}
             </h1>
           </div>
-          <div className="pt-[64px] flex gap-[32px]">
+          <div className="pt-[64px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-[32px]">
             {language.projects.map((item) => (
               <ProjectCard
                 title_text_variant={theme.title_text_variant}

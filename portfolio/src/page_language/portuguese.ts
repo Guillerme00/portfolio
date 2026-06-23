@@ -38,7 +38,7 @@ export const portuguese = {
       skills: ["SQLite", "PostgreSQL"],
     },
     tools: {
-      name: "TOOLS",
+      name: "FERRAMENTAS",
       skills: ["Git", "GitHub", "VS Code", "Docker", "Figma", "Postman"],
     },
   },
