@@ -4,7 +4,7 @@ import GM from "./assets/icons/GM.svg?react";
 import GITHUB from "./assets/icons/GITHUB.svg?react";
 import LINKEDIN from "./assets/icons/LINKEDIN.svg?react";
 import MAIL from "./assets/icons/MAIL.svg?react";
-// import MENU from "./assets/icons/MENU.svg?react";
+import MENU from "./assets/icons/MENU.svg?react";
 import LIGHT_MODE from "./assets/icons/DARK_MODE.svg?react";
 import DARK_MODE from "./assets/icons/LIGHT_MODE.svg?react";
 
@@ -20,6 +20,7 @@ import ProjectCard from "./components/project_card";
 function App() {
   const [pageStyle, setPageStyle] = useState("dark");
   const [pageLanguage, setPageLanguage] = useState("PT-BR");
+  const [showMenu, setShowMenu] = useState(false);
 
   const theme = pageStyle === "dark" ? dark : light;
   const language = pageLanguage === "PT-BR" ? portuguese : english;
@@ -50,7 +51,7 @@ function App() {
 
           {/* mid */}
           <div
-            className={`${theme.title_text_variant} flex gap-[24px] geist-header`}
+            className={`hidden md:flex ${theme.title_text_variant} gap-[24px] geist-header`}
           >
             <button
               className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
@@ -100,7 +101,7 @@ function App() {
 
           {/* right */}
           <div
-            className={`${theme.title_text_variant} flex gap-[24px] geist-header`}
+            className={`${theme.title_text_variant} hidden md:flex gap-[24px] geist-header`}
           >
             <button
               className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
@@ -130,6 +131,62 @@ function App() {
                 }}
               />
             )}
+          </div>
+          {/* menu drop */}
+          <div className="flex md:hidden relative">
+            <MENU className={`w-[46px] h-[22px] cursor-pointer ${theme.title_text_color} ${theme.title_hover} transition-colors duration-300`}
+            onClick={() => setShowMenu((prev) => !prev)}/>
+            <div className={`${theme.title_text_variant} gap-[24px] geist-header flex flex-col ${theme.button_border_color} border-[1px] absolute top-full right-0 mt-2 p-[12px] gap-6 transition-all duration-300 ${theme.primary_background} ${showMenu ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}`}>
+                <button
+                className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
+                onClick={() => (
+                  setShowMenu((prev) => !prev),
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  })
+                )
+              }
+              >
+                {language.header_about_me}
+              </button>
+              <button
+                className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
+                onClick={() => {
+                  setShowMenu((prev) => !prev),
+                  document.getElementById("skills")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }}
+              >
+                {language.header_skills}
+              </button>
+              <button
+                className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
+                onClick={() => {
+                  setShowMenu((prev) => !prev),
+                  document.getElementById("projects")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }}
+              >
+                {language.header_projects}
+              </button>
+              <button
+                className={`cursor-pointer ${theme.title_hover} transition-colors duration-300`}
+                onClick={() => {
+                  setShowMenu((prev) => !prev),
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }}
+              >
+                {language.header_contact}
+              </button>
+            </div>
           </div>
         </header>
         {/* Body 1 */}
