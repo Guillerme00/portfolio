@@ -28,7 +28,7 @@ function App() {
     <>
       <div
         className={`
-          min-h-screen flex flex-colA
+          min-h-screen flex flex-col
           ${theme.primary_background}`}
       >
         {/* Header */}
